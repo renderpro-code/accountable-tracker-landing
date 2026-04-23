@@ -1,0 +1,5 @@
+name = "accountable-tracker-landing"
+compatibility_date = "2026-04-23"
+
+[assets]
+directory = "."
