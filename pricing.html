@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Accountable — Plan reimbursements, made simple.</title>
-  <meta name="description" content="Track home office, mileage, and expenses. Auto-calculate IRS rates. Export compliant PDFs in seconds." />
+  <title>Pricing — Accountable</title>
+  <meta name="description" content="One price. No surprises. Every Accountable plan includes a 14-day free trial. No credit card required." />
   <link rel="icon" type="image/png" href="assets/logo-mark-black.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="src/theme.css" />
   <link rel="stylesheet" href="src/sections.css" />
   <link rel="stylesheet" href="src/heroes.css" />
+  <link rel="stylesheet" href="src/pricing.css" />
   <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
@@ -19,7 +20,7 @@
 <body data-theme="light">
   <div id="root"></div>
   <script type="text/babel" src="src/sections.jsx"></script>
-  <script type="text/babel" src="src/heroes.jsx"></script>
+  <script type="text/babel" src="src/pricing.jsx"></script>
   <script type="text/babel">
     const { useState, useEffect } = React;
     function App() {
@@ -36,16 +37,13 @@
       }, []);
       return (
         <>
-          <Nav theme={theme} onThemeToggle={() => setTheme(theme === "dark" ? "light" : "dark")} page="landing" />
-          <HeroEditorial />
-          <ProblemSection />
-          <FeaturesSection />
-          <HowItWorks />
-          <Pricing />
-          <Testimonials />
-          <FAQ />
-          <FooterCTA />
-          <Footer page="landing" />
+          <Nav theme={theme} onThemeToggle={() => setTheme(theme === "dark" ? "light" : "dark")} page="pricing" />
+          <PricingHero />
+          <PlanCards />
+          <ComparisonTable />
+          <PricingFAQ />
+          <PricingCTA />
+          <Footer page="pricing" />
         </>
       );
     }

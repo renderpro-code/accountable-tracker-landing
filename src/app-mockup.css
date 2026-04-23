@@ -1,0 +1,145 @@
+/* App dashboard mockup used in hero + How it works */
+.appmock {
+  width: 100%;
+  background: var(--paper);
+  border: 1px solid var(--rule-strong);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 40px 80px -40px color-mix(in oklch, var(--ink) 30%, transparent),
+              0 10px 30px -10px color-mix(in oklch, var(--ink) 15%, transparent);
+  color: var(--ink);
+  font-family: var(--font-ui);
+}
+
+.appmock-chrome {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--rule);
+  background: var(--paper-2);
+}
+.appmock-dots { display: flex; gap: 6px; }
+.appmock-dots span { width: 10px; height: 10px; border-radius: 50%; background: var(--rule-strong); }
+.appmock-dots span:nth-child(1) { background: oklch(0.72 0.14 30); }
+.appmock-dots span:nth-child(2) { background: oklch(0.82 0.13 85); }
+.appmock-dots span:nth-child(3) { background: oklch(0.70 0.12 150); }
+.appmock-url {
+  background: var(--paper); border: 1px solid var(--rule);
+  padding: 4px 14px; border-radius: 6px;
+  font-size: 11px; color: var(--ink-3);
+}
+
+.appmock-body { display: grid; grid-template-columns: 180px 1fr; min-height: 420px; }
+.appmock-side {
+  padding: 18px 14px;
+  border-right: 1px solid var(--rule);
+  display: flex; flex-direction: column; gap: 18px;
+  background: var(--paper-2);
+}
+.appmock-brand { display: flex; align-items: center; gap: 8px; font-family: var(--font-display); font-size: 15px; font-weight: 500; }
+.appmock-brand-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px color-mix(in oklch, var(--accent) 25%, transparent); }
+.appmock-nav { display: flex; flex-direction: column; gap: 2px; }
+.appmock-nav a {
+  font-size: 13px; color: var(--ink-2);
+  padding: 7px 10px; border-radius: 6px;
+  transition: background 120ms var(--ease), color 120ms var(--ease);
+}
+.appmock-nav a.on { background: color-mix(in oklch, var(--accent) 14%, transparent); color: var(--ink); font-weight: 500; }
+.appmock-side-foot {
+  margin-top: auto;
+  display: flex; align-items: center; gap: 10px;
+  padding-top: 14px; border-top: 1px solid var(--rule);
+}
+.appmock-avatar {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: var(--accent); color: var(--accent-ink);
+  font-size: 11px; font-weight: 600;
+  display: grid; place-items: center;
+}
+
+.appmock-main { padding: 22px 24px; display: flex; flex-direction: column; gap: 18px; overflow: hidden; }
+.appmock-pageheader { display: flex; justify-content: space-between; align-items: flex-start; }
+.appmock-kpis { display: flex; gap: 12px; }
+.kpi {
+  display: flex; flex-direction: column; align-items: flex-end;
+  padding: 8px 14px; border-radius: 8px;
+  background: var(--paper-2); border: 1px solid var(--rule);
+}
+.kpi-k { font-size: 10.5px; color: var(--ink-3); text-transform: uppercase; letter-spacing: .1em; font-family: var(--font-mono); }
+.kpi-v { font-family: var(--font-display); font-size: 18px; margin-top: 2px; }
+
+/* Step 1: form */
+.appmock-form { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.appmock-form label { display: flex; flex-direction: column; gap: 6px; }
+.appmock-form label > span:first-child { font-size: 12px; color: var(--ink-3); text-transform: uppercase; letter-spacing: .08em; font-family: var(--font-mono); }
+.appmock-input {
+  padding: 10px 12px; border: 1px solid var(--rule); border-radius: 8px;
+  background: var(--paper-2);
+  font-size: 14px; color: var(--ink);
+  min-height: 40px; display: flex; align-items: center;
+}
+.appmock-input.filled { background: var(--paper); border-color: var(--rule-strong); }
+.appmock-input.with-sub { display: flex; align-items: baseline; gap: 10px; justify-content: space-between; }
+.appmock-sub { font-family: var(--font-mono); font-size: 11px; color: var(--ink-3); }
+.appmock-btn {
+  align-self: flex-start;
+  padding: 10px 18px; background: var(--ink); color: var(--paper);
+  border: none; border-radius: 8px; font-size: 13.5px; font-weight: 500;
+}
+.appmock-btn.small { padding: 8px 14px; font-size: 12.5px; }
+
+/* Step 2: rows */
+.appmock-rows { display: flex; flex-direction: column; border-top: 1px solid var(--rule); }
+.appmock-row {
+  display: grid;
+  grid-template-columns: 16px 1fr auto auto 90px;
+  align-items: center; gap: 14px;
+  padding: 12px 4px;
+  border-bottom: 1px solid var(--rule);
+  font-size: 13.5px;
+}
+.appmock-row-dot { width: 6px; height: 6px; border-radius: 50%; }
+.appmock-row-name { color: var(--ink); }
+.appmock-row-meta { font-size: 11px; color: var(--ink-3); }
+.appmock-row-date { font-size: 11px; color: var(--ink-3); }
+.appmock-row-amount { text-align: right; font-variant-numeric: tabular-nums; font-weight: 500; }
+
+/* Step 3: PDF preview */
+.appmock-pdf {
+  background: var(--paper-2);
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  padding: 22px 24px;
+  display: flex; flex-direction: column; gap: 18px;
+}
+.appmock-pdf-head { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 1px solid var(--rule); padding-bottom: 14px; }
+.appmock-pdf-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 14px 32px;
+}
+.appmock-pdf-grid > div { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px dashed var(--rule); padding-bottom: 8px; }
+.appmock-pdf-grid span { color: var(--ink-2); font-size: 13px; }
+.appmock-pdf-grid b { font-family: var(--font-display); font-weight: 500; font-size: 17px; font-variant-numeric: tabular-nums; }
+.appmock-pdf-total {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding: 10px 0 2px;
+  border-top: 1px solid var(--ink);
+}
+.appmock-pdf-total span { font-size: 13px; color: var(--ink-2); text-transform: uppercase; letter-spacing: .06em; font-family: var(--font-mono); }
+.appmock-pdf-total b { font-family: var(--font-display); font-weight: 500; font-size: 24px; font-variant-numeric: tabular-nums; }
+.appmock-pdf-stamp {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 11px; color: var(--ok);
+  padding-top: 4px;
+}
+.appmock-pdf-stamp .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--ok); }
+
+/* Compact variant */
+.appmock[data-compact] { font-size: 90%; }
+.appmock[data-compact] .appmock-body { grid-template-columns: 140px 1fr; }
+
+@media (max-width: 720px) {
+  .appmock-body { grid-template-columns: 1fr; }
+  .appmock-side { display: none; }
+  .appmock-form { grid-template-columns: 1fr; }
+  .appmock-row { grid-template-columns: 10px 1fr auto; }
+  .appmock-row-meta, .appmock-row-date { display: none; }
+}
