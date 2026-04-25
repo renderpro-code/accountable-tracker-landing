@@ -1,8 +1,7 @@
 // Pricing page — hero, full comparison, FAQ.
-
 const { useState: useStateP, useEffect: useEffectP } = React;
 
-// ─── Pricing Hero ────────────────────────────────────────────
+// ─── Pricing Hero ──────────────────────────────────────────── //
 const PricingHero = () => (
   <section className="hero hero-pricing" id="top">
     <div className="container">
@@ -12,8 +11,7 @@ const PricingHero = () => (
           One price. <span className="serif-italic">No surprises.</span>
         </h1>
         <p className="hero-sub pricing-sub">
-          Every plan includes a 14-day free trial. No credit card required.
-          Cancel anytime. Export your data whenever you want.
+          Every plan includes a 14-day free trial. No credit card required. Cancel anytime. Export your data whenever you want.
         </p>
         <div className="pricing-hero-trust">
           <span><i className="dot ok" /> 14 days free</span>
@@ -25,7 +23,7 @@ const PricingHero = () => (
   </section>
 );
 
-// ─── Plan cards (big tier cards on top) ──────────────────────
+// ─── Plan cards ────────────────────────────────────────────── //
 const PlanCards = () => (
   <section className="sec-plancards">
     <div className="container">
@@ -38,11 +36,10 @@ const PlanCards = () => (
               <span className="plancard-per">/month</span>
             </div>
             <p className="plancard-desc">
-              For solo owners running their own accountable plan.
-              Up to 2 businesses.
+              For solo owners running their own accountable plan. Up to 2 businesses.
             </p>
           </header>
-          <button className="btn btn-ghost btn-lg" onClick={() => checkout("personal")}>
+          <button className="btn btn-ghost btn-lg" onClick={() => goToApp("personal")}>
             Start 14-day trial
           </button>
           <div className="plancard-note mono">Then $12/month · Cancel anytime</div>
@@ -60,7 +57,7 @@ const PlanCards = () => (
               For S-Corps, multi-business owners, and small teams. Unlimited everything, plus API.
             </p>
           </header>
-          <button className="btn btn-primary btn-lg" onClick={() => checkout("pro")}>
+          <button className="btn btn-primary btn-lg" onClick={() => goToApp("pro")}>
             Start 14-day trial
           </button>
           <div className="plancard-note mono">Then $39/month · Cancel anytime</div>
@@ -86,7 +83,7 @@ const PlanCards = () => (
   </section>
 );
 
-// ─── Comparison table ────────────────────────────────────────
+// ─── Comparison table ──────────────────────────────────────── //
 const COMPARE_ROWS = [
   { cat: "Usage", rows: [
     ["Businesses per account", "2", "Unlimited", "Unlimited"],
@@ -129,12 +126,9 @@ const ComparisonTable = () => (
     <div className="container">
       <div className="section-head">
         <div className="eyebrow">Compare plans</div>
-        <h2 style={{ marginTop: 18 }}>
-          Every feature, side by side.
-        </h2>
+        <h2 style={{ marginTop: 18 }}>Every feature, side by side.</h2>
         <p>Not sure which plan fits? Here's the full breakdown.</p>
       </div>
-
       <div className="cmp-wrap">
         <table className="cmp-table">
           <thead>
@@ -143,13 +137,13 @@ const ComparisonTable = () => (
               <th scope="col">
                 <div className="cmp-plan">Personal</div>
                 <div className="cmp-plan-price">$12<span>/mo</span></div>
-                <button className="btn btn-ghost btn-sm cmp-cta" onClick={() => checkout("personal")}>Start trial</button>
+                <button className="btn btn-ghost btn-sm cmp-cta" onClick={() => goToApp("personal")}>Start trial</button>
               </th>
               <th scope="col" className="cmp-featured">
                 <div className="cmp-plan-badge mono">Most popular</div>
                 <div className="cmp-plan">Pro</div>
                 <div className="cmp-plan-price">$39<span>/mo</span></div>
-                <button className="btn btn-primary btn-sm cmp-cta" onClick={() => checkout("pro")}>Start trial</button>
+                <button className="btn btn-primary btn-sm cmp-cta" onClick={() => goToApp("pro")}>Start trial</button>
               </th>
               <th scope="col">
                 <div className="cmp-plan">Enterprise</div>
@@ -162,11 +156,9 @@ const ComparisonTable = () => (
             {COMPARE_ROWS.map((group) => (
               <React.Fragment key={group.cat}>
                 <tr className="cmp-group">
-                  <th colSpan={4} scope="rowgroup">
-                    <span className="mono">{group.cat}</span>
-                  </th>
+                  <th colSpan={4} scope="rowgroup"><span className="mono">{group.cat}</span></th>
                 </tr>
-                {group.rows.map(([label, p, pr, e], i) => (
+                {group.rows.map(([label, p, pr, e]) => (
                   <tr key={label}>
                     <th scope="row">{label}</th>
                     <td><Cell v={p} /></td>
@@ -183,24 +175,16 @@ const ComparisonTable = () => (
   </section>
 );
 
-// ─── Pricing FAQ ─────────────────────────────────────────────
+// ─── Pricing FAQ ───────────────────────────────────────────── //
 const PRICING_FAQS = [
-  ["Can I change plans anytime?",
-   "Yes. Upgrade or downgrade whenever. We prorate the difference to the day, so you never pay for time you didn't use."],
-  ["Is there a yearly discount?",
-   "Annual billing is coming. If you're interested today, email sales@accountabletracker.com and we'll honor early-bird pricing."],
-  ["What counts as a \"business\"?",
-   "Any separate entity or Schedule C — each with its own settings, history, and PDF report. A freelancer with two DBAs counts as two."],
-  ["How does the trial work?",
-   "14 days, full feature access, no credit card required. We'll email you before it ends. If you don't pick a plan, your account pauses but your data stays intact."],
-  ["What if I need more than Pro?",
-   "Enterprise. Custom client limits, SSO, API access, dedicated support, and volume pricing. Email sales@accountabletracker.com."],
-  ["Do you offer refunds?",
-   "Yes. If you're unhappy within the first 30 days after upgrading from trial, email support and we'll refund, no questions."],
-  ["How is my data stored?",
-   "Encrypted in transit and at rest. Regular backups. No third-party data sharing. Full privacy policy at /privacy."],
-  ["Can I export my data?",
-   "Anytime. PDF reports for filings, and CSV/JSON of your raw records for your own records. No lock-in."],
+  ["Can I change plans anytime?", "Yes. Upgrade or downgrade whenever. We prorate the difference to the day, so you never pay for time you didn't use."],
+  ["Is there a yearly discount?", "Annual billing is coming. If you're interested today, email sales@accountabletracker.com and we'll honor early-bird pricing."],
+  ["What counts as a \"business\"?", "Any separate entity or Schedule C — each with its own settings, history, and PDF report. A freelancer with two DBAs counts as two."],
+  ["How does the trial work?", "14 days, full feature access, no credit card required. We'll email you before it ends. If you don't pick a plan, your account pauses but your data stays intact."],
+  ["What if I need more than Pro?", "Enterprise. Custom client limits, SSO, API access, dedicated support, and volume pricing. Email sales@accountabletracker.com."],
+  ["Do you offer refunds?", "Yes. If you're unhappy within the first 30 days after upgrading from trial, email support and we'll refund, no questions."],
+  ["How is my data stored?", "Encrypted in transit and at rest. Regular backups. No third-party data sharing. Full privacy policy at /privacy."],
+  ["Can I export my data?", "Anytime. PDF reports for filings, and CSV/JSON of your raw records for your own records. No lock-in."],
 ];
 
 const PricingFAQ = () => {
@@ -231,7 +215,7 @@ const PricingFAQ = () => {
   );
 };
 
-// ─── Pricing CTA (bottom) ────────────────────────────────────
+// ─── Pricing CTA ───────────────────────────────────────────── //
 const PricingCTA = () => (
   <section className="sec-footercta">
     <div className="container footercta-wrap">
