@@ -422,8 +422,8 @@ const Footer = ({ page = "landing" }) => {
         </div>
         <div className="foot-meta">
           <span>© 2026 Trident Visual LLC</span>
-          <a href="#">Privacy</a>
-          <a href="#">Terms</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
         </div>
       </div>
     </footer>
