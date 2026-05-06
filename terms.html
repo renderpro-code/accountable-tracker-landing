@@ -4,38 +4,38 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Terms of Service — Accountable Tracker</title>
+  <meta name="description" content="Terms of Service for Accountable Tracker, a product of Trident Visual LLC." />
+  <link rel="icon" type="image/png" href="assets/logo-mark-black.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg-primary:   #222426;
-      --bg-secondary: #2a2d30;
-      --bg-card:      #2e3135;
-      --accent:       #d4784a;
-      --accent-hover: #bf6a3e;
-      --text-primary: #d8d9db;
-      --text-muted:   #7a8088;
-      --text-label:   #a0a6ad;
-      --border:       #3d4248;
+      --cream:      #f5f0e8;
+      --cream-dark: #ede7d9;
+      --ink:        #1a1510;
+      --ink-mid:    #3d3528;
+      --ink-muted:  #7a6f5e;
+      --accent:     #c96b3a;
+      --border:     #ddd7cc;
     }
 
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
-      background: var(--bg-primary);
-      color: var(--text-primary);
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--cream);
+      color: var(--ink);
       font-size: 0.95rem;
-      line-height: 1.7;
+      line-height: 1.75;
       -webkit-font-smoothing: antialiased;
     }
 
     nav {
-      background: var(--bg-secondary);
+      background: var(--cream);
       border-bottom: 1px solid var(--border);
-      padding: 0 2rem;
-      height: 56px;
+      padding: 0 2.5rem;
+      height: 60px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -44,115 +44,149 @@
       z-index: 100;
     }
     .nav-brand {
-      font-weight: 700;
-      font-size: 1rem;
-      color: var(--accent);
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 500;
+      font-size: 1.1rem;
+      color: var(--ink);
       text-decoration: none;
-      letter-spacing: 0.3px;
     }
     .nav-back {
-      font-size: 0.85rem;
-      color: var(--text-muted);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      color: var(--ink-muted);
       text-decoration: none;
       transition: color 0.15s;
     }
     .nav-back:hover { color: var(--accent); }
 
     .page-wrap {
-      max-width: 740px;
+      max-width: 720px;
       margin: 0 auto;
-      padding: 3rem 1.5rem 5rem;
+      padding: 4rem 1.5rem 6rem;
     }
 
     .page-header {
-      margin-bottom: 2.5rem;
-      padding-bottom: 1.5rem;
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
       border-bottom: 1px solid var(--border);
     }
-    .page-header h1 {
-      font-size: 1.75rem;
-      font-weight: 700;
-      color: var(--text-primary);
-      margin-bottom: 0.4rem;
+    .eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-bottom: 0.75rem;
     }
-    .page-header .effective {
-      font-size: 0.82rem;
-      color: var(--text-muted);
+    h1 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 2.5rem;
+      font-weight: 400;
+      line-height: 1.15;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+    }
+    .effective {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      color: var(--ink-muted);
     }
 
-    section { margin-bottom: 2.25rem; }
+    .disclaimer-box {
+      background: var(--cream-dark);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: 4px;
+      padding: 1.1rem 1.25rem;
+      margin-bottom: 3rem;
+      font-size: 0.88rem;
+      color: var(--ink-mid);
+      line-height: 1.6;
+    }
+    .disclaimer-box strong { color: var(--ink); }
+
+    section { margin-bottom: 2.5rem; }
 
     h2 {
-      font-size: 0.78rem;
-      font-weight: 600;
-      color: var(--accent);
-      margin-bottom: 0.75rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--ink-muted);
       text-transform: uppercase;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.9rem;
     }
-    p {
-      color: var(--text-label);
-      margin-bottom: 0.85rem;
-    }
+    p { color: var(--ink-mid); margin-bottom: 0.85rem; }
     p:last-child { margin-bottom: 0; }
-    ul {
-      list-style: none;
-      padding: 0;
-      margin-bottom: 0.85rem;
-    }
+
+    ul { list-style: none; padding: 0; margin-bottom: 0.85rem; }
     ul li {
-      color: var(--text-label);
-      padding: 0.25rem 0 0.25rem 1.1rem;
+      color: var(--ink-mid);
+      padding: 0.4rem 0 0.4rem 1.25rem;
       position: relative;
+      border-bottom: 1px solid var(--border);
     }
+    ul li:first-child { border-top: 1px solid var(--border); }
     ul li::before {
-      content: '–';
+      content: '—';
       position: absolute;
       left: 0;
       color: var(--accent);
+      font-size: 0.8rem;
+      font-family: 'JetBrains Mono', monospace;
     }
+    ul li strong { color: var(--ink); }
+
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
 
-    .disclaimer-box {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-left: 3px solid var(--accent);
-      border-radius: 6px;
-      padding: 1rem 1.25rem;
-      margin-bottom: 2.25rem;
-    }
-    .disclaimer-box p { margin: 0; font-size: 0.88rem; }
-
     footer {
-      background: var(--bg-secondary);
+      background: var(--cream);
       border-top: 1px solid var(--border);
-      padding: 2rem 1.5rem;
-      text-align: center;
+      padding: 1.5rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.75rem;
       font-size: 0.8rem;
-      color: var(--text-muted);
+      color: var(--ink-muted);
     }
-    footer a { color: var(--text-muted); margin: 0 0.5rem; }
-    footer a:hover { color: var(--accent); }
-    .footer-links { margin-bottom: 0.5rem; }
+    .footer-brand {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 0.95rem;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .footer-links { display: flex; gap: 1.5rem; align-items: center; }
+    .footer-links a { color: var(--ink-muted); text-decoration: none; }
+    .footer-links a:hover { color: var(--accent); }
+
+    @media (max-width: 600px) {
+      nav { padding: 0 1.25rem; }
+      .page-wrap { padding: 2.5rem 1.25rem 4rem; }
+      h1 { font-size: 1.9rem; }
+      footer { padding: 1.25rem; flex-direction: column; align-items: flex-start; }
+    }
   </style>
 </head>
 <body>
 
 <nav>
-  <a class="nav-brand" href="/">Accountable Tracker</a>
-  <a class="nav-back" href="/">← Back to Home</a>
+  <a class="nav-brand" href="/">Accountable</a>
+  <a class="nav-back" href="/">← back to home</a>
 </nav>
 
 <div class="page-wrap">
 
   <div class="page-header">
+    <div class="eyebrow">Legal</div>
     <h1>Terms of Service</h1>
-    <div class="effective">Effective date: May 2026 &nbsp;·&nbsp; Trident Visual LLC</div>
+    <div class="effective">Effective May 2026 · Trident Visual LLC</div>
   </div>
 
   <div class="disclaimer-box">
-    <p><strong style="color: var(--text-primary);">Not financial, tax, or legal advice.</strong> Accountable Tracker is a software tool that helps you organize and document business expense reimbursements. Nothing in this app, its documentation, or any communications from Trident Visual LLC constitutes financial, tax, accounting, or legal advice. You are solely responsible for ensuring your accountable plan complies with IRS requirements. Consult a qualified CPA or tax attorney for professional guidance.</p>
+    <strong>Not financial, tax, or legal advice.</strong> Accountable Tracker is a software tool that helps organize and document business expense reimbursements. Nothing in this app or its communications constitutes financial, tax, accounting, or legal advice. You are solely responsible for IRS compliance. Consult a qualified CPA or tax attorney for professional guidance.
   </div>
 
   <section>
@@ -162,94 +196,86 @@
 
   <section>
     <h2>2. The Service</h2>
-    <p>Accountable Tracker is a web-based software application operated by Trident Visual LLC that allows business owners and employees to track, document, and export expense reimbursement records in a format consistent with IRS accountable plan guidelines. The service is provided "as is" and may be updated, changed, or discontinued at any time.</p>
+    <p>Accountable Tracker is a web-based application operated by Trident Visual LLC that allows business owners and employees to track, document, and export expense reimbursement records consistent with IRS accountable plan guidelines. The service is provided "as is" and may be updated, changed, or discontinued at any time.</p>
   </section>
 
   <section>
     <h2>3. Accounts & Eligibility</h2>
-    <p>You must be at least 18 years old to use this service. You are responsible for maintaining the security of your account. You may not share account credentials or allow others to access your account. Notify us immediately at <a href="mailto:support@accountabletracker.com">support@accountabletracker.com</a> if you suspect unauthorized access.</p>
+    <p>You must be at least 18 years old to use this service. You are responsible for maintaining the security of your account and may not share credentials or allow unauthorized access. Notify us immediately at <a href="mailto:support@accountabletracker.com">support@accountabletracker.com</a> if you suspect unauthorized access.</p>
   </section>
 
   <section>
     <h2>4. Subscriptions & Billing</h2>
-    <p>Accountable Tracker is offered on a monthly subscription basis. All plans begin with a free trial period. After the trial ends, continued access requires a paid subscription.</p>
     <ul>
+      <li>All plans begin with a free trial period; continued access after trial requires a paid subscription</li>
       <li>Subscriptions are billed monthly through Stripe</li>
-      <li>You may cancel your subscription at any time from the billing portal; access continues through the end of the paid period</li>
-      <li>CPA firm plans (Starter and Growth) are billed separately from individual user plans</li>
+      <li>You may cancel at any time from the billing portal; access continues through the end of the paid period</li>
+      <li>CPA firm plans are billed separately from individual user plans</li>
       <li>Prices may change with 30 days' notice to active subscribers</li>
     </ul>
   </section>
 
   <section>
     <h2>5. Refund Policy</h2>
-    <p>If you are unsatisfied with Accountable Tracker within the first 30 days after upgrading from a free trial to a paid plan, email <a href="mailto:support@accountabletracker.com">support@accountabletracker.com</a> and we will issue a full refund — no questions asked.</p>
-    <p>Refund requests made after 30 days of paid use, or for renewals beyond the first billing cycle, are handled on a case-by-case basis at our discretion.</p>
+    <p>If you are unsatisfied within the first 30 days after upgrading from a free trial to a paid plan, email <a href="mailto:support@accountabletracker.com">support@accountabletracker.com</a> for a full refund — no questions asked. Refund requests after 30 days of paid use are handled on a case-by-case basis.</p>
   </section>
 
   <section>
     <h2>6. Your Data</h2>
-    <p>You retain ownership of all data you enter into Accountable Tracker. By using the service, you grant Trident Visual LLC a limited license to store and process that data solely for the purpose of providing the service to you. We do not sell your data or use it for advertising. See our <a href="/privacy.html">Privacy Policy</a> for full details.</p>
+    <p>You retain ownership of all data you enter. By using the service, you grant Trident Visual LLC a limited license to store and process that data solely to provide the service. We do not sell your data or use it for advertising. See our <a href="/privacy.html">Privacy Policy</a> for full details.</p>
   </section>
 
   <section>
     <h2>7. CPA Portal Terms</h2>
-    <p>CPA firm accounts may invite clients to link their Accountable Tracker accounts to the firm's portal. By accepting an invitation, clients consent to their CPA having read access to their expense reports and PDF exports. CPA users agree to:</p>
+    <p>CPA firm accounts may invite clients to link their accounts to the firm's portal. By accepting an invitation, clients consent to their CPA having read access to their expense reports and PDF exports. CPA users agree to:</p>
     <ul>
       <li>Use client data only for legitimate professional purposes</li>
       <li>Comply with applicable professional standards and data protection obligations</li>
       <li>Not share client data with unauthorized third parties</li>
     </ul>
-    <p>Trident Visual LLC is not responsible for how CPA users handle client data within the bounds of their professional relationship.</p>
   </section>
 
   <section>
     <h2>8. Acceptable Use</h2>
-    <p>You agree not to:</p>
-    <ul>
-      <li>Use the service for any unlawful purpose or to facilitate tax fraud</li>
-      <li>Attempt to reverse engineer, scrape, or copy the application</li>
-      <li>Interfere with or disrupt the service's infrastructure</li>
-      <li>Misrepresent your identity or create accounts on behalf of others without authorization</li>
-    </ul>
-    <p>We reserve the right to suspend or terminate accounts that violate these terms without refund.</p>
+    <p>You agree not to use the service for any unlawful purpose, to facilitate tax fraud, to reverse engineer or copy the application, to interfere with the service's infrastructure, or to misrepresent your identity. We reserve the right to suspend or terminate accounts that violate these terms without refund.</p>
   </section>
 
   <section>
     <h2>9. No Warranty</h2>
-    <p>Accountable Tracker is provided "as is" without warranty of any kind. We do not guarantee that the service will be error-free, uninterrupted, or that outputs will be accepted by the IRS or any tax authority. Use of the service does not constitute a guarantee of tax compliance. You are responsible for verifying all data entered and exported.</p>
+    <p>Accountable Tracker is provided "as is" without warranty of any kind. We do not guarantee the service will be error-free or uninterrupted, nor that outputs will be accepted by any tax authority. You are responsible for verifying all data entered and exported.</p>
   </section>
 
   <section>
     <h2>10. Limitation of Liability</h2>
-    <p>To the fullest extent permitted by law, Trident Visual LLC shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of the service, including but not limited to tax penalties, audit outcomes, or loss of data. Our total liability to you for any claim shall not exceed the amount you paid us in the 3 months prior to the claim.</p>
+    <p>To the fullest extent permitted by law, Trident Visual LLC shall not be liable for any indirect, incidental, or consequential damages arising from your use of the service, including tax penalties, audit outcomes, or data loss. Our total liability for any claim shall not exceed the amount you paid us in the 3 months prior to the claim.</p>
   </section>
 
   <section>
     <h2>11. Governing Law</h2>
-    <p>These terms are governed by the laws of the State of California, without regard to its conflict of law provisions. Any disputes shall be resolved in the courts of Los Angeles County, California.</p>
+    <p>These terms are governed by the laws of the State of California. Any disputes shall be resolved in the courts of Los Angeles County, California.</p>
   </section>
 
   <section>
     <h2>12. Changes to These Terms</h2>
-    <p>We may update these terms as the product evolves. We will notify active subscribers of material changes by email at least 14 days before they take effect. Continued use of the service after that date constitutes acceptance of the updated terms.</p>
+    <p>We will notify active subscribers of material changes by email at least 14 days before they take effect. Continued use after that date constitutes acceptance of the updated terms.</p>
   </section>
 
   <section>
     <h2>13. Contact</h2>
-    <p>Questions about these terms? Email <a href="mailto:support@accountabletracker.com">support@accountabletracker.com</a>.</p>
-    <p style="color: var(--text-muted); font-size: 0.85rem;">Trident Visual LLC · Burbank, CA</p>
+    <p><a href="mailto:support@accountabletracker.com">support@accountabletracker.com</a><br>
+    <span style="color: var(--ink-muted); font-size: 0.85rem;">Trident Visual LLC · Burbank, CA</span></p>
   </section>
 
 </div>
 
 <footer>
+  <a class="footer-brand" href="/">Accountable</a>
   <div class="footer-links">
-    <a href="/privacy.html">Privacy Policy</a>
-    <a href="/terms.html">Terms of Service</a>
+    <span>© 2026 Trident Visual LLC</span>
+    <a href="/privacy.html">Privacy</a>
+    <a href="/terms.html">Terms</a>
     <a href="mailto:support@accountabletracker.com">Support</a>
   </div>
-  <div>© 2026 Trident Visual LLC. All rights reserved.</div>
 </footer>
 
 </body>
