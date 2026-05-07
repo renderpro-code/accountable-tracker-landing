@@ -301,7 +301,7 @@ const CPA_TESTIMONIALS = [
   },
 ];
 
-const CPATestimonials = () => (
+const CPATestimonials = () => null;
   <section id="cpa-testimonials" className="sec-testimonials">
     <div className="container">
       <div className="section-head">
