@@ -1,7 +1,7 @@
 // Landing page sections — direction A committed.
 const { useState, useEffect, useRef, useCallback } = React;
 
-// ─── Theme hook ────────────────────────────────────────────── //
+// ─── Theme hook ────────────────────────────────────────────────────────────── //
 const useTheme = () => {
   const [theme, setTheme] = useState(() =>
     typeof document !== "undefined" ? (document.body.dataset.theme || "light") : "light"
@@ -22,9 +22,6 @@ const DARK_MAP = {
 const themedAsset = (src, theme) => (theme === "dark" && DARK_MAP[src]) ? DARK_MAP[src] : src;
 
 // ─── App redirect (replaces Stripe checkout on landing page) ──
-// All CTAs send users to the app with plan + email pre-filled.
-// The app handles OAuth login, then redirects to the correct
-// Stripe checkout internally. Keeps Stripe keys off the landing page.
 const APP_URL = "https://ap2.accountabletracker.com/";
 const BETA_TOKEN = "RkT8KeKze52Vrr8blIjUOe_qBs-lE6Nk";
 
@@ -311,40 +308,8 @@ const Pricing = () => (
   </section>
 );
 
-// ─── Testimonials ──────────────────────────────────────────── //
-const TESTIMONIALS = [
-  { q: "Saved me 10 hours a year on bookkeeping. The PDF exports are perfect for my CPA.", n: "Sarah M.", r: "Freelance Designer" },
-  { q: "As an S-Corp, I was terrified of missing deductions. This tool makes it bulletproof.", n: "John D.", r: "Consultant" },
-  { q: "Finally, a tool built specifically for accountable plans. Worth every penny.", n: "Michelle L.", r: "Coaching Business Owner" },
-];
-
-const Testimonials = () => (
-  <section id="testimonials" className="sec-testimonials">
-    <div className="container">
-      <div className="section-head">
-        <div className="eyebrow">Customers</div>
-        <h2 style={{ marginTop: 18 }}>Trusted by solo business owners <span className="serif-italic">across the US.</span></h2>
-      </div>
-      <div className="tm-grid">
-        {TESTIMONIALS.map((t, i) => (
-          <figure className="tm-card" key={i}>
-            <blockquote>
-              <span className="tm-quote">"</span>
-              {t.q}
-            </blockquote>
-            <figcaption>
-              <div className="tm-avatar" aria-hidden>{t.n[0]}</div>
-              <div>
-                <div className="tm-name">{t.n}</div>
-                <div className="tm-role">{t.r}</div>
-              </div>
-            </figcaption>
-          </figure>
-        ))}
-      </div>
-    </div>
-  </section>
-);
+// ─── Testimonials — hidden until real reviews available ───── //
+const Testimonials = () => null;
 
 // ─── FAQ ───────────────────────────────────────────────────── //
 const FAQS = [
