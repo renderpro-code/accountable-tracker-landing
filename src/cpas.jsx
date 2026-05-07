@@ -126,7 +126,7 @@ const CPASolution = () => (
           Automate reimbursements.<br/>
           <span className="serif-italic">Keep your clients happy.</span>
         </h2>
-        <p>Built specifically for the accountable plan workflow. For firms with 10–500 clients.</p>
+        <p>Built specifically for the accountable plan workflow.</p>
       </div>
       <div className="feat-grid">
         {CPA_BENEFITS.map((f) => (
@@ -282,54 +282,8 @@ const CPAPricing = () => (
   </section>
 );
 
-// ─── CPA Testimonials ────────────────────────────────────────
-const CPA_TESTIMONIALS = [
-  {
-    q: "Since we rolled this out, reimbursement admin is down 75%. Clients see it as added value. We charge $15/month per client — it pays for itself immediately.",
-    n: "Jane Smith, CPA",
-    r: "Smith & Associates",
-  },
-  {
-    q: "The audit trail alone is worth it. Two clients got flagged last year — both came through clean because every calculation was documented.",
-    n: "Robert Johnson",
-    r: "Tax Advisor, Johnson Group",
-  },
-  {
-    q: "I was skeptical about another SaaS tool. Four months in, it's the highest-retention software we've deployed with clients.",
-    n: "Maria Chen, CPA",
-    r: "Chen Tax Services",
-  },
-];
-
+// ─── CPA Testimonials — hidden until real reviews available ──
 const CPATestimonials = () => null;
-  <section id="cpa-testimonials" className="sec-testimonials">
-    <div className="container">
-      <div className="section-head">
-        <div className="eyebrow">What firms say</div>
-        <h2 style={{ marginTop: 18 }}>
-          From firms currently <span className="serif-italic">using it.</span>
-        </h2>
-      </div>
-      <div className="tm-grid">
-        {CPA_TESTIMONIALS.map((t, i) => (
-          <figure className="tm-card" key={i}>
-            <blockquote>
-              <span className="tm-quote">"</span>
-              {t.q}
-            </blockquote>
-            <figcaption>
-              <div className="tm-avatar" aria-hidden>{t.n[0]}</div>
-              <div>
-                <div className="tm-name">{t.n}</div>
-                <div className="tm-role">{t.r}</div>
-              </div>
-            </figcaption>
-          </figure>
-        ))}
-      </div>
-    </div>
-  </section>
-);
 
 // ─── CPA FAQ ─────────────────────────────────────────────────
 const CPA_FAQS = [
