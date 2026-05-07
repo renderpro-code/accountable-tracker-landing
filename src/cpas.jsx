@@ -276,7 +276,7 @@ const CPAPricing = () => (
       </div>
 
       <p className="cpa-pricing-note mono">
-        14-day free trial · Minimum 10 clients to start · 3-month minimum then month-to-month
+        14-day free trial · 3-month minimum then month-to-month
       </p>
     </div>
   </section>
